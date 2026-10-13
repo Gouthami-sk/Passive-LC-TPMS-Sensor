@@ -25,16 +25,6 @@ The system is modeled around a passive wireless telemetry loop consisting of:
   $$f_{res} = \frac{1}{2\pi\sqrt{L \cdot C}}$$
 * **The Wireless Handshake (Impedance Dip):** The external reader sweeps frequencies. When its frequency matches the sensor's natural $f_{res}$, inductive coupling draws energy from the reader, creating a sharp, measurable **Impedance Dip** on the receiver side.
 
----
-
-## Project Technicalities
-* **Effective Permittivity Scaling:** The project evaluates the arithmetic mean for **Horizontal (Parallel)** configurations ($\epsilon_{eff} = 1.55$) versus the harmonic mean for **Vertical (Series)** configurations ($\epsilon_{eff} \approx 1.35$). The parallel layout maximizes electric flux through high-permittivity zones, yielding a massive **55.5% sensitivity gain**.
-* **High-Frequency Supercharge:** In higher frequency bands (>5 MHz), reduced capacitive reactance stretches the frequency tuning range, pushing the sensitivity improvement up to **59.6%**.
-* **Safety Threshold Integration:** A strict operational reference is set at **225 kPa**. Because of the amplified sensitivity, the horizontal configuration triggers an early warning alert at a wide, safe gap of $3.8\text{ }\mu\text{m}$, compared to $2.47\text{ }\mu\text{m}$ for the standard air baseline.
-* **MATLAB App Designer Environment:** The core application utilizes customized `startupFcn` and `SliderValueChanged` callbacks to render real-time telemetry plots, dynamic dielectric switching, and interactive safety limit markers.
-
----
-
 The project implemented a parametric simulation framework in MATLAB App Designer to evaluate how internal dielectric structuring impacts passive sensor performance. By systematically comparing an air baseline against a vertical series stack and a horizontal parallel layout (integrating Teflon, $\epsilon_r = 2.1$).
 
 **The Outcome:** 
