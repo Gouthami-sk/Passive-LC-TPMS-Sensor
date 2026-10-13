@@ -37,5 +37,3 @@ The study successfully demonstrated that the **Horizontal (Parallel)** configura
 2. **Fleet & Autonomous Vehicle Telemetry:** Battery-less monitoring for high-stress environments where active sensors are impractical.
 
 ---
-
-DME.md                # Project documentation
