@@ -35,6 +35,13 @@ The system is modeled around a passive wireless telemetry loop consisting of:
 
 ---
 
+The project implemented a parametric simulation framework in MATLAB App Designer to evaluate how internal dielectric structuring impacts passive sensor performance. By systematically comparing an air baseline against a vertical series stack and a horizontal parallel layout (integrating Teflon, $\epsilon_r = 2.1$).
+
+**The Outcome:** 
+The study successfully demonstrated that the **Horizontal (Parallel)** configuration—utilizing an effective permittivity of $\epsilon_{eff} = 1.55$—drastically outperforms traditional models. It yields a **55.5% sensitivity improvement** in standard ranges, which scales up to **59.6% in higher frequency bands (>5 MHz)** due to reduced capacitive reactance. Furthermore, when mapped against a strict **225 kPa safety reference**, the optimized horizontal design provides a preemptive warning at a wider, safer gap of $3.8\text{ }\mu\text{m}$ compared to $2.47\text{ }\mu\text{m}$ for the standard air baseline, proving its superior viability for high-resolution automotive telemetry. The entire workflow is managed through an interactive GUI built with custom MATLAB App Designer callbacks (`startupFcn` and `SliderValueChanged`) for real-time telemetry and live threshold tracking.
+
+---
+
 ## Applications
 1. **Advanced Automotive TPMS:** Early detection of tire under-inflation to prevent blowout hazards and optimize fuel economy.
 2. **Fleet & Autonomous Vehicle Telemetry:** Battery-less monitoring for high-stress environments where active sensors are impractical.
