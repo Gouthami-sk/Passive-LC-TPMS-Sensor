@@ -1,0 +1,15 @@
+# MATLAB generated files
+*.asv
+*.fig
+*.mat
+*.mldatx
+*.slx
+*.sldd
+
+# MATLAB caches and temporary files
+*.mex*
+bin/
+slprj/
+sfprj/
+codegen/
+/*.log
