@@ -19,7 +19,6 @@ The system is modeled around a passive wireless telemetry loop consisting of:
 
 ## Working Principle
 
-### **The Transduction Chain**
 * **Mechanical Input:** Tire deflation or external load compresses the capacitive gap ($d$).
 * **Electrical Shift:** The reduction in $d$ increases total capacitance ($C$).
 * **Frequency Regulation:** Governed by the classic LC resonance equation:
