@@ -64,17 +64,6 @@ All three layouts use $C = \dfrac{\varepsilon_0 \. \varepsilon_{eff} \. A}{d}$ w
 
 ---
 
-## Dashboard Preview (Constant $2.46\text{ }\mu\text{m}$ Gap Comparison)
-*Comparing response characteristics across configurations at an identical physical gap position:*
-
-<p align="center">
-  <img src="Passive-LC-TPMS-Sensor/interface/2.46um_air.png" width="32%" alt="Air Baseline">
-  <img src="assets/2.46um_vertical.png" width="32%" alt="Vertical Series">
-  <img src="assets/2.46um_harizontal.png" width="32%" alt="Horizontal Parallel">
-</p>
-
----
-
 ## Outcome
 
 With the dashboard normalized to track true pressure, the pressure gauge remains consistent across layouts for any given physical gap. Instead of shifting calibration offsets, the advantage of adding Teflon is directly quantified through **transduction sensitivity ($S_C = dC/dP$)** and **minimum detectable resolution ($\Delta P_{min}$)** assuming a fixed external reader resolution ($\Delta C_{res} = 2\text{ pF}$).
