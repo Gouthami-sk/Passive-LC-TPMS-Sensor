@@ -48,15 +48,15 @@ $$C = \frac{\varepsilon_0 \, \varepsilon_{eff} \, A}{d}$$
 | Reference (recommended) pressure | P_ref | 225 kPa (about 32.6 psi) |
 | Red-zone threshold (25% below reference) | P_warn | 169 kPa |
 
-**Effective permittivity factors**
+All three layouts use $C = \dfrac{\varepsilon_0 \, \varepsilon_{eff} \, A}{d}$ with a different $\varepsilon_{eff}$:
 
-| Configuration | Capacitance | Factor k |
+| Configuration | How it combines | $\varepsilon_{eff}$ |
 |---|---|---|
-| Air only | C = ε₀A/d | 1.00 |
-| Horizontal / parallel (half air, half Teflon) | C = ε₀(A/2)/d + ε₀εr(A/2)/d | 1.55 |
-| Vertical / series (air layer + Teflon layer, d/2 each) | C = C₁C₂ / (C₁ + C₂) | 1.355 |
+| Air only | Plain air gap | $1.00$ |
+| Horizontal / parallel (half air, half Teflon) | $\dfrac{1.0 + 2.1}{2}$ | $1.55$ |
+| Vertical / series (air layer + Teflon layer, $d/2$ each) | $\dfrac{2 \times 1.0 \times 2.1}{1.0 + 2.1}$ | $\approx 1.355$ |
 
-**Pressure–gap mapping (linear, assumed):** P = P_min + (P_max − P_min) · (d_max − d) / (d_max − d_min)
+   $$P = P_{min} + (P_{max} - P_{min}) \cdot \frac{d_{max} - d}{d_{max} - d_{min}}$$
 
 **Gauge zones:** red below 169 kPa, yellow 169–225 kPa, green above 225 kPa.
 
