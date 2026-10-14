@@ -13,15 +13,15 @@ The system is modeled around a passive wireless telemetry loop consisting of:
 1. **Reader Coil:** An external antenna that sweeps across frequency bands to interrogate the sensor.
 2. **Planar Micro-Inductor ($L$):** A fixed inductive element that stores magnetic energy and acts as the receiver antenna.
 3. **Variable Dielectric Capacitor ($C$):** The pressure-sensing core where mechanical gap displacement ($d$) alters total capacitance.
-4. **Composite Dielectric Layers:** Strategic integration of Air ($\epsilon_r = 1.0$) and Polytetrafluoroethylene (Teflon) ($\epsilon_r = 2.1$)[cite: 2].
+4. **Composite Dielectric Layers:** Strategic integration of Air ($\epsilon_r = 1.0$) and Polytetrafluoroethylene (Teflon) ($\epsilon_r = 2.1$).
 
 Capacitor and Inductor are connected in series to form a LC circuit 
 ---
 
 ## Working Principle
 
-- **Mechanical input:** Tire deflation or external load reduces the distance between parallel plates of the capacitor ($d$)[cite: 1, 2].
-- **Change in Capacitance:** As $d$ decreases, total capacitance ($C$) increases[cite: 2].
+- **Mechanical input:** Tire deflation or external load reduces the distance between parallel plates of the capacitor ($d$).
+- **Change in Capacitance:** As $d$ decreases, total capacitance ($C$) increases.
 
 $$C = \frac{\varepsilon_0 \, \varepsilon_{eff} \, A}{d}$$
 
