@@ -32,6 +32,8 @@ $$f_{res} = \frac{1}{2\pi\sqrt{L\.C}}$$
 
 - **The wireless handshake (impedance dip):** The external reader sweeps frequencies. When its frequency matches the sensor's natural $f_{res}$, inductive coupling draws energy from the reader, creating a measurable impedance dip.
 
+The LC circuit is placed inside the tire, while the reader coil is mounted just outside on the car body (wheel-well) near the tire. Because the reader coil is connected to the car's main battery, it continuously sends out frequencies in a certain range. As pressure decreases and the wheel rotates into close proximity with the reader coil, the mutual inductance triggers an impedance dip. The system then performs a reverse calculation on that detected frequency to instantly determine the tire pressure.
+
 ## Constants and Parameters Used
 
 | Parameter | Symbol | Value |
@@ -90,6 +92,7 @@ Key observation:
 - Temperature sensing and compensation.
 - Four-wheel dashboard with individual alerts.
 - Finite-element diaphragm model in place of the linear gap mapping.
+- Utilizing an active microcontroller on the reader unit for hardware prototyping 
 
 ## Applications
 
