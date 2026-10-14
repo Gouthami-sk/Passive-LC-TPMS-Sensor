@@ -45,7 +45,7 @@ $$f_{res} = \frac{1}{2\pi\sqrt{L\.C}}$$
 | Minimum gap (maximum pressure) | d_min | 1 µm |
 | Minimum pressure | P_min | 10 kPa |
 | Maximum pressure | P_max | 350 kPa |
-| Reference (recommended) pressure | P_ref | 225 kPa (about 32.6 psi) |
+| Reference (recommended) pressure | P_ref | 225 kPa |
 | Red-zone threshold (25% below reference) | P_warn | 169 kPa |
 
 All three layouts use $C = \dfrac{\varepsilon_0 \. \varepsilon_{eff} \. A}{d}$ with a different $\varepsilon_{eff}$:
