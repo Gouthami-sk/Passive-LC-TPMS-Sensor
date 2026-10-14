@@ -23,12 +23,12 @@ Capacitor and Inductor are connected in series to form a LC circuit
 - **Mechanical input:** Tire deflation or external load reduces the distance between parallel plates of the capacitor (d).
 - **Change in Capacitance:** As d decreases, total capacitance (C) increases.
 
-  C = ε₀ · ε_eff · A / d
+$$C = \frac{\varepsilon_0 \, \varepsilon_{eff} \, A}{d}$$
 
-  where ε₀ is the permittivity of free space, ε_eff is the effective relative permittivity of the dielectric, A is the plate area and d is the gap. For air only, ε_eff = 1 and C = ε₀A/d.
+  where ε₀ is the permittivity of free space, ε_eff is the effective relative permittivity of the dielectric, A is the plate area and d is the gap.
 - **Change in resonant Frequency:** Increase in C results in drop of the resonant frequency, governed by the LC resonance equation:
 
-  f_res = 1 / (2π√(L·C))
+ $$f_{res} = \frac{1}{2\pi\sqrt{L\,C}}$$
 
 - **The wireless handshake (impedance dip):** The external reader sweeps frequencies. When its frequency matches the sensor's natural f_res, inductive coupling draws energy from the reader, creating a measurable impedance dip on the reader side.
 
