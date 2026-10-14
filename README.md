@@ -13,93 +13,97 @@ The system is modeled around a passive wireless telemetry loop consisting of:
 1. **Reader Coil:** An external antenna that sweeps across frequency bands to interrogate the sensor.
 2. **Planar Micro-Inductor ($L$):** A fixed inductive element that stores magnetic energy and acts as the receiver antenna.
 3. **Variable Dielectric Capacitor ($C$):** The pressure-sensing core where mechanical gap displacement ($d$) alters total capacitance.
-4. **Composite Dielectric Layers:** Strategic integration of Air ($\epsilon_r = 1.0$) and Polytetrafluoroethylene (Teflon) ($\epsilon_r = 2.1$).
+4. **Composite Dielectric Layers:** Strategic integration of Air ($\epsilon_r = 1.0$) and Polytetrafluoroethylene (Teflon) ($\epsilon_r = 2.1$)[cite: 2].
 
 Capacitor and Inductor are connected in series to form a LC circuit 
 ---
 
 ## Working Principle
 
-- **Mechanical input:** Tire deflation or external load reduces the distance between parallel plates of the capacitor (d).
-- **Change in Capacitance:** As d decreases, total capacitance (C) increases.
+- **Mechanical input:** Tire deflation or external load reduces the distance between parallel plates of the capacitor ($d$)[cite: 1, 2].
+- **Change in Capacitance:** As $d$ decreases, total capacitance ($C$) increases[cite: 2].
 
 $$C = \frac{\varepsilon_0 \, \varepsilon_{eff} \, A}{d}$$
 
-  where ε₀ is the permittivity of free space, ε_eff is the effective relative permittivity of the dielectric, A is the plate area and d is the gap.
-- **Change in resonant Frequency:** Increase in C results in drop of the resonant frequency, governed by the LC resonance equation:
+  where $\varepsilon_0$ is the permittivity of free space, $\varepsilon_{eff}$ is the effective relative permittivity of the dielectric, $A$ is the plate area and $d$ is the gap[cite: 2].
+- **Change in resonant Frequency:** Increase in $C$ results in drop of the resonant frequency, governed by the LC resonance equation[cite: 3]:
 
- $$f_{res} = \frac{1}{2\pi\sqrt{L\,C}}$$
+  $$f_{res} = \frac{1}{2\pi\sqrt{L\,C}}$$
 
-- **The wireless handshake (impedance dip):** The external reader sweeps frequencies. When its frequency matches the sensor's natural f_res, inductive coupling draws energy from the reader, creating a measurable impedance dip on the reader side.
+- **The wireless handshake (impedance dip):** The external reader sweeps frequencies. When its frequency matches the sensor's natural $f_{res}$, inductive coupling draws energy from the reader, creating a measurable impedance dip on the reader side[cite: 3].
 
 ## Constants and Parameters Used
 
 | Parameter | Symbol | Value |
 |---|---|---|
-| Inductance | L | 10 µH |
-| Permittivity of free space | ε₀ | 8.854 × 10⁻¹² F/m |
-| Relative permittivity of air | εr (air) | 1.0 |
-| Relative permittivity of Teflon | εr (Teflon) | 2.1 |
-| Plate area | A | 5 mm × 5 mm = 25 mm² |
-| Maximum gap (minimum pressure) | d_max | 5 µm |
-| Minimum gap (maximum pressure) | d_min | 1 µm |
-| Minimum pressure | P_min | 10 kPa |
-| Maximum pressure | P_max | 350 kPa |
-| Reference (recommended) pressure | P_ref | 225 kPa (about 32.6 psi) |
+| Inductance | L | 10 µH[cite: 2] |
+| Permittivity of free space | ε₀ | 8.854 × 10⁻¹² F/m[cite: 2] |
+| Relative permittivity of air | εr (air) | 1.0[cite: 2] |
+| Relative permittivity of Teflon | εr (Teflon) | 2.1[cite: 2] |
+| Plate area | A | 5 mm × 5 mm = 25 mm²[cite: 2] |
+| Maximum gap (minimum pressure) | d_max | 5 µm[cite: 2] |
+| Minimum gap (maximum pressure) | d_min | 1 µm[cite: 2] |
+| Minimum pressure | P_min | 10 kPa[cite: 2] |
+| Maximum pressure | P_max | 350 kPa[cite: 2] |
+| Reference (recommended) pressure | P_ref | 225 kPa (about 32.6 psi)[cite: 2] |
 | Red-zone threshold (25% below reference) | P_warn | 169 kPa |
 
-All three layouts use $C = \dfrac{\varepsilon_0 \, \varepsilon_{eff} \, A}{d}$ with a different $\varepsilon_{eff}$:
+All three layouts use $C = \dfrac{\varepsilon_0 \, \varepsilon_{eff} \, A}{d}$ with a different $\varepsilon_{eff}$[cite: 3]:
 
 | Configuration | How it combines | $\varepsilon_{eff}$ |
 |---|---|---|
-| Air only | Plain air gap | $1.00$ |
-| Horizontal / parallel (half air, half Teflon) | $\dfrac{1.0 + 2.1}{2}$ | $1.55$ |
-| Vertical / series (air layer + Teflon layer, $d/2$ each) | $\dfrac{2 \times 1.0 \times 2.1}{1.0 + 2.1}$ | $\approx 1.355$ |
+| Air only | Plain air gap[cite: 3] | $1.00$[cite: 5] |
+| Horizontal / parallel (half air, half Teflon) | $\dfrac{1.0 + 2.1}{2}$[cite: 3] | $1.55$[cite: 5] |
+| Vertical / series (air layer + Teflon layer, $d/2$ each) | $\dfrac{2 \times 1.0 \times 2.1}{1.0 + 2.1}$[cite: 3] | $\approx 1.355$[cite: 3, 5] |
 
 **Pressure Mapping:**
    
-   $$P = P_{min} + (P_{max} - P_{min}) \cdot \frac{d_{max} - d}{d_{max} - d_{min}}$$
+   $$P = P_{min} + (P_{max} - P_{min}) \cdot \frac{d_{max} - d}{d_{max} - d_{min}}$$[cite: 2]
 
-**Gauge zones:** red below 169 kPa, yellow 169–225 kPa, green above 225 kPa.
+**Gauge zones:** red below 169 kPa, yellow 169–225 kPa, green above 225 kPa[cite: 4].
 
+---
+
+## Dashboard Preview (Constant $2.46\text{ }\mu\text{m}$ Gap Comparison)
+*Comparing response characteristics across configurations at an identical physical gap position:*
+
+<p align="center">
+  <img src="assets/2.46um_air.png" width="32%" alt="Air Baseline">
+  <img src="assets/2.46um_vertical.png" width="32%" alt="Vertical Series">
+  <img src="assets/2.46um_harizontal.png" width="32%" alt="Horizontal Parallel">
+</p>
+
+---
 
 ## Outcome
 
-It was observed that adding a Teflon dielectric raises the capacitance by a fixed factor at every gap, which increases the **capacitive sensitivity** (dC/dP) of the sensor.
+With the dashboard normalized to track true pressure, the pressure gauge remains consistent across layouts for any given physical gap. Instead of shifting calibration offsets, the advantage of adding Teflon is directly quantified through **transduction sensitivity ($S_C = dC/dP$)** and **minimum detectable resolution ($\Delta P_{min}$)** assuming a fixed external reader resolution ($\Delta C_{res} = 2\text{ pF}$).
 
 | Metric | Air only | Vertical (series) | Horizontal (parallel) |
 |---|---|---|---|
-| Effective permittivity factor | 1.00 | about 1.355 | 1.55 |
-| **Capacitive sensitivity improvement** | baseline | **+35.5%** | **+55%** |
-| Capacitance range, 5 → 1 µm | 44 → 221 pF | 60 → 300 pF | 69 → 343 pF |
-| Resonant frequency, 5 → 1 µm | 7.6 → 3.4 MHz | 6.5 → 2.9 MHz | 6.1 → 2.7 MHz |
-| Absolute frequency shift per kPa | baseline | about 14% lower | about 20% lower |
-| Apparent pressure at true 10 kPa | 10 kPa | 121 kPa | 161 kPa |
-
-**Safety threshold gaps** (the gap at which the gauge crosses each zone boundary):
-
-| Boundary | Air only | Vertical | Horizontal |
-|---|---|---|---|
-| Red → yellow (169 kPa) | 3.13 µm | 4.24 µm | 4.85 µm |
-| Yellow → green (225 kPa) | 2.47 µm | 3.35 µm | 3.83 µm |
+| Effective permittivity factor ($\varepsilon_{eff}$) | 1.00[cite: 5] | about 1.355[cite: 3, 5] | 1.55[cite: 5] |
+| **Capacitive sensitivity ($S_C$ at $2.46\text{ }\mu\text{m}$)** | **0.429 pF/kPa** | **0.581 pF/kPa** | **0.665 pF/kPa** |
+| **Minimum detectable pressure change ($\Delta P_{min}$)** | **4.66 kPa** | **3.44 kPa** | **3.01 kPa (Highest Resolution)** |
+| Capacitance at $2.46\text{ }\mu\text{m}$ | 89.8 pF | 121.7 pF | 139.2 pF |
+| Resonant Frequency | 5.31 MHz | 4.56 MHz | 4.27 MHz |
 
 Key findings:
 
-- The **horizontal (parallel)** layout gives the largest capacitive sensitivity improvement (+55%), followed by the vertical (series) layout (+35.5%). The improvement is constant over the whole 1–5 µm range.
-- The gain is in **capacitance**. The relative (fractional) frequency shift per kPa is the same for all three layouts, and the absolute frequency shift per kPa is smaller for the Teflon layouts.
-- The Teflon layouts reach the 225 kPa boundary at larger gaps (3.83 µm and 3.35 µm, against 2.47 µm for air). This is an offset caused by using the air-only calibration, where the sensor reads a higher apparent pressure than the true pressure. It is not an early-warning advantage: the red zone is reached only at about 23 kPa (horizontal) and 75 kPa (vertical) true pressure, so the low-pressure warning is delayed unless each layout is calibrated separately (divide C by 1.55 or about 1.355 before converting to pressure).
-  
-- > **Note:** This simulation considers an idea sensor model and assumes gap to pressure relationship is linear.
+- **Maximized Sensitivity:** The **horizontal (parallel)** layout achieves the highest capacitive sensitivity ($0.665\text{ pF/kPa}$ at $2.46\text{ }\mu\text{m}$), requiring a smaller minimum detectable pressure change ($\Delta P_{min} = 3.01\text{ kPa}$) compared to the air baseline ($4.66\text{ kPa}$).
+- **Signal Resolution Advantage:** Because Teflon multiplies total capacitance without distorting true pressure normalization, the enhanced $dC/dP$ slope allows external reader circuits to resolve finer pressure fluctuations.
+- **Resonance Shift:** Incorporating high-permittivity dielectrics lowers absolute resonant frequencies (down to $4.27\text{ MHz}$ for horizontal vs. $5.31\text{ MHz}$ for air at the same gap), providing distinct frequency bands for multi-material sensor design.
+
+> **Note:** This simulation considers an ideal sensor model and assumes a linear gap-to-pressure relationship[cite: 7].
 
 ---
+
 ## Future Scope
-- Temperature sensing and compensation.
-- Four-wheel dashboard with individual alerts.
-- Finite-element diaphragm model in place of the linear gap mapping.
+- Temperature sensing and compensation[cite: 7].
+- Four-wheel dashboard with individual alerts[cite: 7].
+- Finite-element diaphragm model in place of the linear gap mapping[cite: 7].
 
 ## Applications
 
-1. **Advanced Automotive TPMS:** Early detection of tire under-inflation to prevent blowout hazards and optimize fuel economy.
+1. **Advanced Automotive TPMS:** Early detection of tire under-inflation to prevent blowout hazards and optimize fuel economy[cite: 1, 7].
 2. **Fleet & Autonomous Vehicle Telemetry:** Battery-less monitoring for high-stress environments where active sensors are impractical.
-
-
+3. 
