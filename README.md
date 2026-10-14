@@ -30,7 +30,7 @@ $$C = \frac{\varepsilon_0 \. \varepsilon_{eff} \. A}{d}$$
 
 $$f_{res} = \frac{1}{2\pi\sqrt{L\.C}}$$
 
-- **The wireless handshake (impedance dip):** The external reader sweeps frequencies. When its frequency matches the sensor's natural $f_{res}$, inductive coupling draws energy from the reader, creating a measurable impedance dip .
+- **The wireless handshake (impedance dip):** The external reader sweeps frequencies. When its frequency matches the sensor's natural $f_{res}$, inductive coupling draws energy from the reader, creating a measurable impedance dip.
 
 ## Constants and Parameters Used
 
