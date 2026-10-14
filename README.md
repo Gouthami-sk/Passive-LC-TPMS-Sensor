@@ -76,7 +76,7 @@ With the dashboard normalized to track true pressure, the pressure gauge remains
 | Capacitance at $2.46\text{ }\mu\text{m}$ | 89.8 pF | 121.7 pF | 139.2 pF |
 | Resonant Frequency | 5.31 MHz | 4.56 MHz | 4.27 MHz |
 
-Key findings:
+Key observation:
 
 - **Maximized Sensitivity:** The **horizontal (parallel)** layout achieves the highest capacitive sensitivity ($0.665\text{ pF/kPa}$ at $2.46\text{ }\mu\text{m}$), requiring a smaller minimum detectable pressure change ($\Delta P_{min} = 3.01\text{ kPa}$) compared to the air baseline ($4.66\text{ kPa}$).
 - **Signal Resolution Advantage:** Because Teflon multiplies total capacitance without distorting true pressure normalization, the enhanced $dC/dP$ slope allows external reader circuits to resolve finer pressure fluctuations.
