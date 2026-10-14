@@ -68,7 +68,7 @@ All three layouts use $C = \dfrac{\varepsilon_0 \. \varepsilon_{eff} \. A}{d}$ w
 *Comparing response characteristics across configurations at an identical physical gap position:*
 
 <p align="center">
-  <img src="assets/2.46um_air.png" width="32%" alt="Air Baseline">
+  <img src="Passive-LC-TPMS-Sensor/interface/2.46um_air.png" width="32%" alt="Air Baseline">
   <img src="assets/2.46um_vertical.png" width="32%" alt="Vertical Series">
   <img src="assets/2.46um_harizontal.png" width="32%" alt="Horizontal Parallel">
 </p>
