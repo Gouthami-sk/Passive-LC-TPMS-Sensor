@@ -48,7 +48,7 @@ $$f_{res} = \frac{1}{2\pi\sqrt{L\,C}}$$
 | Reference (recommended) pressure | P_ref | 225 kPa (about 32.6 psi) |
 | Red-zone threshold (25% below reference) | P_warn | 169 kPa |
 
-All three layouts use $C = \dfrac{\varepsilon_0 \, \varepsilon_{eff} \, A}{d}$ with a different $\varepsilon_{eff}$:
+All three layouts use $C = \dfrac{\varepsilon_0 \. \varepsilon_{eff} \. A}{d}$ with a different $\varepsilon_{eff}$:
 
 | Configuration | How it combines | $\varepsilon_{eff}$ |
 |---|---|---|
