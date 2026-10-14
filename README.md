@@ -1,6 +1,6 @@
 # Passive Wireless LC-TPMS Sensor: Dielectric Optimization Study
 
-A MATLAB simulation framework that models and optimizes passive wireless Tire Pressure Monitoring Systems (TPMS) through innovative dielectric layer engineering.
+A MATLAB simulation framework that models and optimizes passive wireless Tire Pressure Monitoring Systems (TPMS) by introducing dielectric layer.
 
 ## About
 Traditional passive TPMS sensors often suffer from weak signal responses and limited sensitivity due to standard air-filled capacitor constraints.
