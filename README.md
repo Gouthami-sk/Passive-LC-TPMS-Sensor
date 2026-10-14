@@ -86,9 +86,10 @@ Key findings:
 - The **horizontal (parallel)** layout gives the largest capacitive sensitivity improvement (+55%), followed by the vertical (series) layout (+35.5%). The improvement is constant over the whole 1–5 µm range.
 - The gain is in **capacitance**. The relative (fractional) frequency shift per kPa is the same for all three layouts, and the absolute frequency shift per kPa is smaller for the Teflon layouts.
 - The Teflon layouts reach the 225 kPa boundary at larger gaps (3.83 µm and 3.35 µm, against 2.47 µm for air). This is an offset caused by using the air-only calibration, where the sensor reads a higher apparent pressure than the true pressure. It is not an early-warning advantage: the red zone is reached only at about 23 kPa (horizontal) and 75 kPa (vertical) true pressure, so the low-pressure warning is delayed unless each layout is calibrated separately (divide C by 1.55 or about 1.355 before converting to pressure).
----
-> **Note:** This simulation considers an idea sensor model and assumes gap to pressure relationship is linear.
+  
+- > **Note:** This simulation considers an idea sensor model and assumes gap to pressure relationship is linear.
 
+---
 ## Future Scope
 - Temperature sensing and compensation.
 - Four-wheel dashboard with individual alerts.
