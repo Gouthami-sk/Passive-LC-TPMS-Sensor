@@ -57,6 +57,7 @@ All three layouts use $C = \dfrac{\varepsilon_0 \, \varepsilon_{eff} \, A}{d}$ w
 | Vertical / series (air layer + Teflon layer, $d/2$ each) | $\dfrac{2 \times 1.0 \times 2.1}{1.0 + 2.1}$ | $\approx 1.355$ |
 
 **Pressure Mapping:**
+   
    $$P = P_{min} + (P_{max} - P_{min}) \cdot \frac{d_{max} - d}{d_{max} - d_{min}}$$
 
 **Gauge zones:** red below 169 kPa, yellow 169–225 kPa, green above 225 kPa.
